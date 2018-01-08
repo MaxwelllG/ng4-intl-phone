@@ -35,6 +35,9 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     @Input()
     defaultCountry: string;
 
+    @Input()
+    phonePlaceholder: string;
+
     // ELEMENT REF
     phoneComponent: ElementRef;
 

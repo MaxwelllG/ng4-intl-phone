@@ -11,17 +11,18 @@
                    (click)="updateSelectedCountry($event, country.countryCode)">
                   <span [class]="'flag flag-' + country.countryCode"></span>
                   <span class="country-name">{{ country.name }}  <span
-                    class="dial-code">+ {{ country.dialCode}}</span></span>
+                      class="dial-code">+ {{ country.dialCode}}</span></span>
                 </a>
               </div>
             </div>
         </div>
       </span>
-  <input onlyNumber="true"
-         class="form-control"
-         maxlength="15"
-         [disabled]="disabled"
-         [(ngModel)]="phoneInput"
-         (ngModelChange)="updatePhone()">
+    <input onlyNumber="true"
+           class="form-control"
+           maxlength="15"
+           [disabled]="disabled"
+           [(ngModel)]="phoneInput"
+           (ngModelChange)="updatePhone()"
+           placeholder="phonePlaceholder">
 </div>
 
