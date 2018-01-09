@@ -29,20 +29,20 @@ export class OnlyNumberDirective {
                 (e.keyCode === 88 && e.ctrlKey === true) ||
                 // Allow: home, end, left, right
                 (e.keyCode >= 35 && e.keyCode <= 39) ||
-                // Allow plus button
-                (e.keyCode === 107) || (e.keyCode === 187) ||
-                // Allow minus button
-                (e.keyCode === 109) || (e.keyCode === 189)) {
-                // let it happen, don't do anything
+            // // Allow plus button
+            // (e.keyCode === 107) || (e.keyCode === 187) ||
+            // // Allow minus button
+            // (e.keyCode === 109) || (e.keyCode === 189)) {
+            // let it happen, don't do anything
                 return;
-            }
-            let ch = String.fromCharCode(e.keyCode);
-            let regEx = new RegExp(this.regexStr);
-            if (regEx.test(ch)) {
-                return;
-            } else if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
-                e.preventDefault();
-            }
+        }
+        let ch = String.fromCharCode(e.keyCode);
+        let regEx = new RegExp(this.regexStr);
+        if (regEx.test(ch)) {
+            return;
+        } else if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
         }
     }
+}
 }
