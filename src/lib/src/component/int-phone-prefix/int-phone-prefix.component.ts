@@ -121,7 +121,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
     updatePhone() {
         if (IntPhonePrefixComponent.startsWithPlus(this.phoneInput)) {
-            this.findPrefix(this.phoneInput.split(PLUS)[1]);
+            this.findPrefix(this.selectedCountry.countryCode);
         } else {
             this.selectedCountry = null;
         }
