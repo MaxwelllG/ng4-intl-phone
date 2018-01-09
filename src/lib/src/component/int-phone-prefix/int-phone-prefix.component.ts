@@ -71,10 +71,6 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         this.countries = this.service.getCountries();
         this.locales = this.localeService.getLocales(this.locale);
         this.translateCountryNames();
-        if (this.defaultCountry) {
-            this.selectedCountry = this.countries.find((country: Country) => country.countryCode === this.defaultCountry);
-        }
-        console.log(`${this.defaultCountry} ngOnInit`);
     }
 
     setDisabledState(isDisabled: boolean): void {
@@ -124,14 +120,11 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     }
 
     updatePhone() {
-        // if (IntPhonePrefixComponent.startsWithPlus(this.phoneInput)) {
-        //     this.findPrefix(this.phoneInput.split(PLUS)[1]);
-        // } else {
-        //     this.selectedCountry = null;
-        // }
-
-        this.findPrefix(this.selectedCountry.countryCode);
-        console.log('update phone func');
+        if (IntPhonePrefixComponent.startsWithPlus(this.phoneInput)) {
+            this.findPrefix(this.phoneInput.split(PLUS)[1]);
+        } else {
+            this.selectedCountry = null;
+        }
 
         this.updateValue();
     }
@@ -156,7 +149,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
             : this.phoneInput;
 
         this.selectedCountry = this.countries.find((country: Country) => country.countryCode === countryCode);
-        this.phoneInput = `${PLUS}${this.selectedCountry.dialCode} ${newInputValue.replace(/ /g, '')}`;
+        this.phoneInput = newInputValue; //`${PLUS}${this.selectedCountry.dialCode} ${newInputValue.replace(/ /g, '')}`;
     }
 
     private findPrefix(prefix: string) {
