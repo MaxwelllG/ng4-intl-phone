@@ -3,7 +3,7 @@
          <div class="dropdown">
             <button type="button" class="dropbtn btn" (click)="showDropDown()" [disabled]="disabled">
               <span [class]="'flag flag-' + selectedCountry.countryCode" *ngIf="selectedCountry"></span>
-                <span class="dial-code-preview"><span> + </span>{{ selectedCountry.dialCode }}</span>
+                <span class="dial-code-preview"><span>+</span>{{ selectedCountry.dialCode }}</span>
               <span class="defaultCountry" *ngIf="!selectedCountry"></span>
             </button>
             <div class="dropdown-content" *ngIf="showDropdown" clickOutside>
