@@ -71,6 +71,10 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         this.countries = this.service.getCountries();
         this.locales = this.localeService.getLocales(this.locale);
         this.translateCountryNames();
+        if (this.defaultCountry) {
+            this.selectedCountry = this.countries.find((country: Country) => country.countryCode === this.defaultCountry);
+        }
+        console.log(`${this.defaultCountry} ngOnInit`);
     }
 
     setDisabledState(isDisabled: boolean): void {
@@ -127,6 +131,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         // }
 
         this.findPrefix(this.selectedCountry.countryCode);
+        console.log('update phone func');
 
         this.updateValue();
     }
