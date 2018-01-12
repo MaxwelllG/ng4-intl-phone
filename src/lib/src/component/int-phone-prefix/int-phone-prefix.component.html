@@ -24,6 +24,7 @@
            [disabled]="disabled"
            [(ngModel)]="phoneInput"
            (ngModelChange)="updatePhone()"
+           (blur)="emitBlurEvent()"
            placeholder="{{ phonePlaceholder }}">
 </div>
 

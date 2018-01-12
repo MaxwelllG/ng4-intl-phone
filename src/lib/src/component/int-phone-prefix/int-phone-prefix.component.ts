@@ -1,4 +1,14 @@
-import {Component, ElementRef, forwardRef, HostListener, Input, OnInit, Renderer2} from '@angular/core';
+import {
+    Component,
+    ElementRef,
+    forwardRef,
+    HostListener,
+    Input,
+    Output,
+    EventEmitter,
+    OnInit,
+    Renderer2
+} from '@angular/core';
 import {Country} from '../../interface/country.interface';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {CountryCode} from '../../interface/country-code.interface';
@@ -37,6 +47,8 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
     @Input()
     phonePlaceholder: string;
+
+    @Output() blurEvent = new EventEmitter();
 
     // ELEMENT REF
     phoneComponent: ElementRef;
@@ -174,5 +186,9 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
                     ? first
                     : second
         );
+    }
+
+    public emitBlurEvent() {
+        this.blurEvent.emit();
     }
 }
