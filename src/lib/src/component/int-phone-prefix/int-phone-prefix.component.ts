@@ -120,7 +120,8 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         this.updateValue();
     }
 
-    showDropDown() {
+    showDropDown(event: any) {
+        console.log(event);
         this.showDropdown = !this.showDropdown;
         this.countryFilter = '';
     }
