@@ -191,4 +191,8 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     public emitBlurEvent() {
         this.blurEvent.emit();
     }
+
+    public dropDownKeyDown(event: any) {
+        console.log(event);
+    }
 }
