@@ -1,7 +1,7 @@
 <div class="input-group international-phone-holder">
       <span class="input-group-addon flagInput">
          <div class="dropdown">
-            <button type="button" class="dropbtn btn" (click)="showDropDown($event)" [disabled]="disabled">
+            <button type="button" class="dropbtn btn" (click)="showDropDown()" [disabled]="disabled">
                 <span [class]="'flag flag-' + selectedCountry.countryCode" *ngIf="selectedCountry"></span>
                 <span class="dial-code-preview">+{{selectedCountry?.dialCode}}</span>
                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
