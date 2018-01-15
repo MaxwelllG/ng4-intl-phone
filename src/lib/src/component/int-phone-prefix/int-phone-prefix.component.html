@@ -11,7 +11,7 @@
               <div class="list-group scrollable-menu">
                 <a href="#" class="list-group-item"
                    *ngFor="let country of countries | country: countryFilter ; let isFirst = first;"
-                   [ngClass]="'focusedPhoneCode' : isFirst"
+                   [ngClass]="{'focusedPhoneCode' : isFirst}"
                    (click)="updateSelectedCountry($event, country.countryCode)">
                   <span [class]="'flag flag-' + country.countryCode"></span>
                   <span class="country-name">{{ country.name }}  <span
