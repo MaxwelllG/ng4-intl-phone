@@ -194,5 +194,11 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
     public dropDownKeyDown(event: any) {
         console.log(event);
+        let element = event.srcElement.nextElementSibling; // get the sibling element
+
+        if (element == null)  // check if its null
+            return;
+        else
+            element.focus();   // focus if not null
     }
 }
