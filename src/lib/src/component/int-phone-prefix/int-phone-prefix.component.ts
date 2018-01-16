@@ -125,7 +125,9 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         this.countryFilter = '';
         setTimeout(function () {
             const firstPhoneCodeElement = document.getElementsByClassName('focusedPhoneCode')[0] as HTMLElement;
-            firstPhoneCodeElement.focus();
+            if (firstPhoneCodeElement) {
+                firstPhoneCodeElement.focus();
+            }
         }, 200);
     }
 
@@ -205,7 +207,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
             element = event.srcElement.nextElementSibling;
         }
 
-        if (element == null)  // check if its null
+        if (!element)  // check if its null
             return;
         else
             element.focus();   // focus if not null
