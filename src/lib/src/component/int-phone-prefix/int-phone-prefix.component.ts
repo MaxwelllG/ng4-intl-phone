@@ -125,7 +125,6 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         this.countryFilter = '';
         setTimeout(function () {
             const firstPhoneCodeElement = document.getElementsByClassName('focusedPhoneCode')[0] as HTMLElement;
-            console.log(firstPhoneCodeElement);
             firstPhoneCodeElement.focus();
         }, 200);
     }
@@ -198,7 +197,6 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     }
 
     public dropDownKeyDown(event: any) {
-        console.log(event);
         let element;
         if (event.keyCode == 38) { // up
             element = event.srcElement.previousElementSibling;
