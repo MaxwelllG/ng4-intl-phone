@@ -201,9 +201,11 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     public dropDownKeyDown(event: any) {
         let element;
         if (event.keyCode == 38) { // up
+            event.preventDefault();
             element = event.srcElement.previousElementSibling;
         }
         if (event.keyCode == 40) { // down
+            event.preventDefault();
             element = event.srcElement.nextElementSibling;
         }
 
