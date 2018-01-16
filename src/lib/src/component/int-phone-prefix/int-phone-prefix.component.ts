@@ -123,6 +123,11 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     showDropDown() {
         this.showDropdown = !this.showDropdown;
         this.countryFilter = '';
+        setTimeout(function () {
+            const firstPhoneCodeElement = document.getElementsByClassName('focusedPhoneCode')[0] as HTMLElement;
+            console.log(firstPhoneCodeElement);
+            firstPhoneCodeElement.focus();
+        }, 200);
     }
 
     hideDropdown(event: Event) {
