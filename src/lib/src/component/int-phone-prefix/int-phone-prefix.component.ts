@@ -74,7 +74,6 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         if (this.showDropdown) {
             this.filterString = this.filterString + event.key;
             this.countryFilter = `${this.filterString}`;
-            console.log(this.filterString);
         }
     }
 
@@ -231,6 +230,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
             event.preventDefault();
             this.filterString = this.filterString.slice(0, -1);
             this.countryFilter = `${this.filterString}`;
+            console.log(this.countryFilter);
         }
     }
 }
