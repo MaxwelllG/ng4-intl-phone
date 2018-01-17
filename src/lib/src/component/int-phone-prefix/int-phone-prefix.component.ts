@@ -204,6 +204,12 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
     public test(event: any) {
         console.log(event);
+        if (event.keyCode == 8) { // backspace
+            event.preventDefault();
+            this.filterString = this.filterString.slice(0, -1);
+            this.countryFilter = `${this.filterString}`;
+            console.log(this.countryFilter);
+        }
     }
 
     public dropDownKeyDown(event: any) {
@@ -233,11 +239,11 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
         console.log(event);
 
-        if (event.keyCode == 8) { // backspace
-            event.preventDefault();
-            this.filterString = this.filterString.slice(0, -1);
-            this.countryFilter = `${this.filterString}`;
-            console.log(this.countryFilter);
-        }
+        // if (event.keyCode == 8) { // backspace
+        //     event.preventDefault();
+        //     this.filterString = this.filterString.slice(0, -1);
+        //     this.countryFilter = `${this.filterString}`;
+        //     console.log(this.countryFilter);
+        // }
     }
 }
