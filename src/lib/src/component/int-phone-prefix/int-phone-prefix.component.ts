@@ -69,14 +69,14 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     filterString = '';
 
     // FILTER COUNTRIES LIST WHEN DROPDOWN IS OPEN
-    @HostListener('document:keypress', ['$event'])
-    handleKeyboardEvent(event: KeyboardEvent) {
-        if (this.showDropdown) {
-            console.log(event);
-            this.filterString = this.filterString + event.key;
-            this.countryFilter = `${this.filterString}`;
-        }
-    }
+    // @HostListener('document:keypress', ['$event'])
+    // handleKeyboardEvent(event: KeyboardEvent) {
+    //     if (this.showDropdown) {
+    //         console.log(event);
+    //         this.filterString = this.filterString + event.key;
+    //         this.countryFilter = `${this.filterString}`;
+    //     }
+    // }
 
     constructor(private service: CountryService, private localeService: LocaleService, phoneComponent: ElementRef) {
         this.phoneComponent = phoneComponent;
@@ -234,6 +234,12 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
             this.filterString = this.filterString.slice(0, -1);
             this.countryFilter = `${this.filterString}`;
             console.log(this.countryFilter);
+        }
+
+        if (this.showDropdown) {
+            console.log(event);
+            this.filterString = this.filterString + event.key;
+            this.countryFilter = `${this.filterString}`;
         }
     }
 }
