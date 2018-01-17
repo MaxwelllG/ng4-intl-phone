@@ -72,10 +72,13 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     @HostListener('document:keypress', ['$event'])
     handleKeyboardEvent(event: KeyboardEvent) {
         if (this.showDropdown) {
-            this.filterString = this.filterString + event.key;
-            // this.countryFilter = `${this.countryFilter}${this.filterString}`;
+            if (event.keyCode == 8) { // backspace
+                event.preventDefault();
+                this.filterString.slice(0, -1);
+            } else {
+                this.filterString = this.filterString + event.key;
+            }
             this.countryFilter = `${this.filterString}`;
-            console.log(`${this.filterString}`);
         }
     }
 
@@ -127,6 +130,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     showDropDown() {
         this.showDropdown = !this.showDropdown;
         this.countryFilter = '';
+        this.filterString = '';
         setTimeout(function () {
             const firstPhoneCodeElement = document.getElementsByClassName('focusedPhoneCode')[0] as HTMLElement;
             if (firstPhoneCodeElement) {
