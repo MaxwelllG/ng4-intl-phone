@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b9299ae4-84ec-456f-b902-ca795a48cf1a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts" afterPath="$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/src/directive/only-number.directive.ts" afterPath="$PROJECT_DIR$/src/lib/src/directive/only-number.directive.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="int-phone-prefix.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="100" column="26" lean-forward="false" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+            <state relative-caret-position="370">
+              <caret line="81" column="43" lean-forward="true" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
               <folding>
                 <element signature="e#0#164#0" expanded="true" />
               </folding>
@@ -296,12 +295,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515404633164</updated>
-      <workItem from="1515404635081" duration="60350000" />
+      <workItem from="1515404635081" duration="60702000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60350000" />
+    <option name="totallyTimeSpent" value="60702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2560" height="1368" extended-state="6" />
@@ -436,8 +435,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="100" column="26" lean-forward="false" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+        <state relative-caret-position="370">
+          <caret line="81" column="43" lean-forward="true" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
           <folding>
             <element signature="e#0#164#0" expanded="true" />
           </folding>
