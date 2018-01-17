@@ -243,5 +243,12 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
                 phoneInput.focus();
             }
         }
+        if (event.keyCode == 13) { // enter
+            const phoneInput = document.getElementById('phone_number_input') as HTMLElement;
+            if (phoneInput) {
+                this.showDropdown = false;
+                phoneInput.focus();
+            }
+        }
     }
 }
