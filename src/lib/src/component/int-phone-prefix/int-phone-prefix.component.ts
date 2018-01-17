@@ -70,8 +70,32 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
     // FILTER COUNTRIES LIST WHEN DROPDOWN IS OPEN
     @HostListener('document:keydown', ['$event'])
-    handleKeyboardEvent(event: KeyboardEvent) {
+    handleKeyboardEvent(event: any) {
         if (this.showDropdown) {
+            let element;
+            if (event.keyCode == 38) { // up
+                event.preventDefault();
+                element = event.srcElement.previousElementSibling;
+            }
+            if (event.keyCode == 40) { // down
+                event.preventDefault();
+                element = event.srcElement.nextElementSibling;
+            }
+
+            if (element) {
+                element.focus();   // focus if not null
+            }
+
+            if (event.keyCode == 9) { // tab
+                event.preventDefault();
+                event.target.click();
+                const phoneInput = document.getElementById('phone_number_input') as HTMLElement;
+                if (phoneInput) {
+                    this.showDropdown = false;
+                    phoneInput.focus();
+                }
+            }
+
             if (event.keyCode == 8) { // backspace
                 event.preventDefault();
                 this.filterString = this.filterString.slice(0, -1);
