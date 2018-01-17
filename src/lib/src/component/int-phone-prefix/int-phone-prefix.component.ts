@@ -202,6 +202,10 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         this.blurEvent.emit();
     }
 
+    public test(event: any) {
+        console.log(event);
+    }
+
     public dropDownKeyDown(event: any) {
         let element;
         if (event.keyCode == 38) { // up
