@@ -69,14 +69,14 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     filterString = '';
 
     // FILTER COUNTRIES LIST WHEN DROPDOWN IS OPEN
-    @HostListener('document:keypress', ['$event'])
-    handleKeyboardEvent(event: KeyboardEvent) {
-        if (this.showDropdown) {
-            console.log(event);
-            this.filterString = this.filterString + event.key;
-            this.countryFilter = `${this.filterString}`;
-        }
-    }
+    // @HostListener('document:keypress', ['$event'])
+    // handleKeyboardEvent(event: KeyboardEvent) {
+    //     if (this.showDropdown) {
+    //         console.log(event);
+    //         this.filterString = this.filterString + event.key;
+    //         this.countryFilter = `${this.filterString}`;
+    //     }
+    // }
 
     constructor(private service: CountryService, private localeService: LocaleService, phoneComponent: ElementRef) {
         this.phoneComponent = phoneComponent;
@@ -202,16 +202,6 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         this.blurEvent.emit();
     }
 
-    public test(event: any) {
-        console.log(event);
-        if (event.keyCode == 8) { // backspace
-            event.preventDefault();
-            this.filterString = this.filterString.slice(0, -1);
-            this.countryFilter = `${this.filterString}`;
-            console.log(this.countryFilter);
-        }
-    }
-
     public dropDownKeyDown(event: any) {
         let element;
         if (event.keyCode == 38) { // up
@@ -239,11 +229,16 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
         console.log(event);
 
-        // if (event.keyCode == 8) { // backspace
-        //     event.preventDefault();
-        //     this.filterString = this.filterString.slice(0, -1);
-        //     this.countryFilter = `${this.filterString}`;
-        //     console.log(this.countryFilter);
-        // }
+        if (event.keyCode == 8) { // backspace
+            event.preventDefault();
+            this.filterString = this.filterString.slice(0, -1);
+            this.countryFilter = `${this.filterString}`;
+            console.log(this.countryFilter);
+        }
+
+        if (event.keyCode >= 48 && event.keyCode <= 90) {
+            this.filterString = this.filterString + event.key;
+            this.countryFilter = `${this.filterString}`;
+        }
     }
 }
