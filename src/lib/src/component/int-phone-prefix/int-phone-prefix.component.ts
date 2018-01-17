@@ -66,13 +66,13 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     disabled = false;
 
     value = '';
-    filterString: string;
+    filterString = '';
 
     // FILTER COUNTRIES LIST WHEN DROPDOWN IS OPEN
     @HostListener('document:keypress', ['$event'])
     handleKeyboardEvent(event: KeyboardEvent) {
         if (this.showDropdown) {
-            this.filterString += event.key;
+            this.filterString = this.filterString + event.key;
             this.countryFilter = `${this.countryFilter}${this.filterString}`;
         }
     }
