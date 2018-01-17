@@ -230,6 +230,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         if (event.keyCode == 8) { // backspace
             event.preventDefault();
             this.filterString = this.filterString.slice(0, -1);
+            this.countryFilter = `${this.filterString}`;
         }
     }
 }
