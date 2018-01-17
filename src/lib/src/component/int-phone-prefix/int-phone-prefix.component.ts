@@ -73,8 +73,9 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     handleKeyboardEvent(event: KeyboardEvent) {
         if (this.showDropdown) {
             this.filterString = this.filterString + event.key;
-            this.countryFilter = `${this.countryFilter}${this.filterString}`;
-            console.log(`${this.countryFilter}${this.filterString}`);
+            // this.countryFilter = `${this.countryFilter}${this.filterString}`;
+            this.countryFilter = `${this.filterString}`;
+            console.log(`${this.filterString}`);
         }
     }
 
