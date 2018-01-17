@@ -69,7 +69,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     filterString = '';
 
     // FILTER COUNTRIES LIST WHEN DROPDOWN IS OPEN
-    @HostListener('document:keypress', ['$event'])
+    @HostListener('document:keydown', ['$event'])
     handleKeyboardEvent(event: KeyboardEvent) {
         if (this.showDropdown) {
             if (event.keyCode == 8) { // backspace
