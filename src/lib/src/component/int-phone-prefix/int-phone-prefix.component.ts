@@ -212,6 +212,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
             event.preventDefault();
             const phoneInput = document.getElementById('phone_number_input') as HTMLElement;
             if (phoneInput) {
+                this.showDropdown = false;
                 phoneInput.focus();
             }
         }
