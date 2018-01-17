@@ -208,6 +208,14 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
             event.preventDefault();
             element = event.srcElement.nextElementSibling;
         }
+
+        if (!element) { // check if its null
+            return;
+        } else {
+            element.focus();   // focus if not null
+            console.log(element.value);
+        }
+
         if (event.keyCode == 9) { // tab
             event.preventDefault();
             const phoneInput = document.getElementById('phone_number_input') as HTMLElement;
@@ -216,10 +224,5 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
                 phoneInput.focus();
             }
         }
-
-        if (!element)  // check if its null
-            return;
-        else
-            element.focus();   // focus if not null
     }
 }
