@@ -213,7 +213,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
             return;
         } else {
             element.focus();   // focus if not null
-            console.log(element.value);
+            element.click();
         }
 
         if (event.keyCode == 9) { // tab
