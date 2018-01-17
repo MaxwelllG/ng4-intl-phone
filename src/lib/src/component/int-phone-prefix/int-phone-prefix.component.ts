@@ -72,6 +72,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     @HostListener('document:keydown', ['$event'])
     handleKeyboardEvent(event: any) {
         if (this.showDropdown) {
+            let element;
             console.log(event);
             if (event.keyCode >= 48 && event.keyCode <= 90) { // letter
                 this.filterString = this.filterString + event.key;
@@ -82,6 +83,18 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
                 this.filterString = this.filterString.slice(0, -1);
                 this.countryFilter = `${this.filterString}`;
                 console.log(this.countryFilter);
+            }
+            if (event.keyCode == 38) { // up
+                event.preventDefault();
+                element = event.srcElement.previousElementSibling;
+            }
+            if (event.keyCode == 40) { // down
+                event.preventDefault();
+                element = event.srcElement.nextElementSibling;
+            }
+
+            if (element) {
+                element.focus();   // focus if not null
             }
         }
     }
