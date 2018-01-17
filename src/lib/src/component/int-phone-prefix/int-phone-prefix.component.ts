@@ -226,6 +226,8 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
             }
         }
 
+        console.log(event);
+
         if (event.keyCode == 8) { // backspace
             event.preventDefault();
             this.filterString = this.filterString.slice(0, -1);
