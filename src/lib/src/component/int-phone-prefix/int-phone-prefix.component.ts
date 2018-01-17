@@ -83,15 +83,6 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
                 this.countryFilter = `${this.filterString}`;
                 console.log(this.countryFilter);
             }
-            if (event.keyCode == 9) { // tab
-                event.preventDefault();
-                event.target.click();
-                const phoneInput = document.getElementById('phone_number_input') as HTMLElement;
-                if (phoneInput) {
-                    this.showDropdown = false;
-                    phoneInput.focus();
-                }
-            }
         }
     }
 
@@ -220,19 +211,19 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     }
 
     public dropDownKeyDown(event: any) {
-        let element;
-        if (event.keyCode == 38) { // up
-            event.preventDefault();
-            element = event.srcElement.previousElementSibling;
-        }
-        if (event.keyCode == 40) { // down
-            event.preventDefault();
-            element = event.srcElement.nextElementSibling;
-        }
-
-        if (element) {
-            element.focus();   // focus if not null
-        }
+        // let element;
+        // if (event.keyCode == 38) { // up
+        //     event.preventDefault();
+        //     element = event.srcElement.previousElementSibling;
+        // }
+        // if (event.keyCode == 40) { // down
+        //     event.preventDefault();
+        //     element = event.srcElement.nextElementSibling;
+        // }
+        //
+        // if (element) {
+        //     element.focus();   // focus if not null
+        // }
 
         if (event.keyCode == 9) { // tab
             event.preventDefault();
@@ -246,16 +237,16 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
         console.log(event);
 
-        if (event.keyCode == 8) { // backspace
-            event.preventDefault();
-            this.filterString = this.filterString.slice(0, -1);
-            this.countryFilter = `${this.filterString}`;
-            console.log(this.countryFilter);
-        }
-
-        if (event.keyCode >= 48 && event.keyCode <= 90) {
-            this.filterString = this.filterString + event.key;
-            this.countryFilter = `${this.filterString}`;
-        }
+        // if (event.keyCode == 8) { // backspace
+        //     event.preventDefault();
+        //     this.filterString = this.filterString.slice(0, -1);
+        //     this.countryFilter = `${this.filterString}`;
+        //     console.log(this.countryFilter);
+        // }
+        //
+        // if (event.keyCode >= 48 && event.keyCode <= 90) {
+        //     this.filterString = this.filterString + event.key;
+        //     this.countryFilter = `${this.filterString}`;
+        // }
     }
 }
