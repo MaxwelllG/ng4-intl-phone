@@ -73,8 +73,16 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     handleKeyboardEvent(event: KeyboardEvent) {
         if (this.showDropdown) {
             console.log(event);
-            // this.filterString = this.filterString + event.key;
-            // this.countryFilter = `${this.filterString}`;
+            if (event.keyCode >= 48 && event.keyCode <= 90) { // letter
+                this.filterString = this.filterString + event.key;
+                this.countryFilter = `${this.filterString}`;
+            }
+            if (event.keyCode == 8) { // backspace
+                event.preventDefault();
+                this.filterString = this.filterString.slice(0, -1);
+                this.countryFilter = `${this.filterString}`;
+                console.log(this.countryFilter);
+            }
         }
     }
 
