@@ -79,6 +79,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
                 this.filterString = this.filterString + event.key;
             }
             this.countryFilter = `${this.filterString}`;
+            console.log(this.filterString);
         }
     }
 
