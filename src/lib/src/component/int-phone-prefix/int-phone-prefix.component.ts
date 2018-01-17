@@ -200,7 +200,6 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
     public dropDownKeyDown(event: any) {
         let element;
-        let lastFocusedElement;
         if (event.keyCode == 38) { // up
             event.preventDefault();
             element = event.srcElement.previousElementSibling;
@@ -212,14 +211,11 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
         if (element) {
             element.focus();   // focus if not null
-            lastFocusedElement = element;
         }
 
         if (event.keyCode == 9) { // tab
             event.preventDefault();
-            if (lastFocusedElement) {
-                lastFocusedElement.click();
-            }
+            event.target.click();
             const phoneInput = document.getElementById('phone_number_input') as HTMLElement;
             if (phoneInput) {
                 this.showDropdown = false;
