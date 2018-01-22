@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9299ae4-84ec-456f-b902-ca795a48cf1a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts" afterPath="$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/src/directive/only-number.directive.ts" afterPath="$PROJECT_DIR$/src/lib/src/directive/only-number.directive.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="int-phone-prefix.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="int-phone-prefix.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
@@ -49,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="only-number.directive.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="only-number.directive.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lib/src/directive/only-number.directive.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+            <state relative-caret-position="345">
+              <caret line="34" column="35" lean-forward="false" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -124,8 +123,8 @@
         <option value="$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.scss" />
         <option value="$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.html" />
         <option value="$PROJECT_DIR$/src/lib/src/service/country.service.ts" />
-        <option value="$PROJECT_DIR$/src/lib/src/directive/only-number.directive.ts" />
         <option value="$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts" />
+        <option value="$PROJECT_DIR$/src/lib/src/directive/only-number.directive.ts" />
       </list>
     </option>
   </component>
@@ -287,12 +286,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515404633164</updated>
-      <workItem from="1515404635081" duration="93505000" />
+      <workItem from="1515404635081" duration="94223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93505000" />
+    <option name="totallyTimeSpent" value="94223000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="978" extended-state="6" />
@@ -417,14 +416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/src/directive/only-number.directive.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -432,6 +423,14 @@
           <folding>
             <element signature="e#0#164#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/src/directive/only-number.directive.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="34" column="35" lean-forward="false" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
