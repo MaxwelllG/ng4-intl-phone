@@ -29,6 +29,7 @@ export class OnlyNumberDirective {
                 (e.keyCode === 88 && e.ctrlKey === true) ||
                 // Allow: home, end, left, right
                 (e.keyCode >= 35 && e.keyCode <= 39)) {
+                e.preventDefault();
                 return;
             }
             let ch = String.fromCharCode(e.keyCode);

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b9299ae4-84ec-456f-b902-ca795a48cf1a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts" afterPath="$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/src/directive/only-number.directive.ts" afterPath="$PROJECT_DIR$/src/lib/src/directive/only-number.directive.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +20,8 @@
       <file leaf-file-name="int-phone-prefix.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="179" column="9" lean-forward="true" selection-start-line="179" selection-start-column="9" selection-end-line="179" selection-end-column="9" />
+            <state relative-caret-position="154">
+              <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
               <folding>
                 <element signature="e#0#164#0" expanded="true" />
               </folding>
@@ -41,8 +42,8 @@
       <file leaf-file-name="int-phone-prefix.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+            <state relative-caret-position="323">
+              <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -51,8 +52,8 @@
       <file leaf-file-name="only-number.directive.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib/src/directive/only-number.directive.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+            <state relative-caret-position="210">
+              <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -82,7 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>updatePhoneInput</find>
       <find>pattern</find>
       <find>dial</find>
       <find>selecte</find>
@@ -109,9 +109,10 @@
       <find>emit</find>
       <find>39</find>
       <find>onlyNumber</find>
+      <find>writeValue</find>
       <find>phoneInput</find>
       <find>updatePhone</find>
-      <find>writeValue</find>
+      <find>split</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -286,12 +287,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515404633164</updated>
-      <workItem from="1515404635081" duration="92943000" />
+      <workItem from="1515404635081" duration="93505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92943000" />
+    <option name="totallyTimeSpent" value="93505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="978" extended-state="6" />
@@ -410,24 +411,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        <state relative-caret-position="323">
+          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/src/directive/only-number.directive.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        <state relative-caret-position="210">
+          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="179" column="9" lean-forward="true" selection-start-line="179" selection-start-column="9" selection-end-line="179" selection-end-column="9" />
+        <state relative-caret-position="154">
+          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
           <folding>
             <element signature="e#0#164#0" expanded="true" />
           </folding>
