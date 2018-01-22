@@ -31,7 +31,7 @@ export class OnlyNumberDirective {
                 (e.keyCode >= 35 && e.keyCode <= 39)) {
                 return;
             }
-            if (e.keyCode === 190 || e.keyCode === 110 || e.shiftKey) {
+            if (e.keyCode === 190 || e.keyCode === 110 || e.shiftKey || e.altKey) {
                 e.preventDefault();
                 return;
             }
