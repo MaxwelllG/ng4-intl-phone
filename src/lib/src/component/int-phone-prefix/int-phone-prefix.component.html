@@ -29,6 +29,7 @@
            [(ngModel)]="phoneInput"
            (ngModelChange)="updatePhone()"
            (blur)="emitBlurEvent()"
+           (focus)="emitPhoneInputFocus()"
            placeholder="{{ phonePlaceholder }}">
 </div>
 

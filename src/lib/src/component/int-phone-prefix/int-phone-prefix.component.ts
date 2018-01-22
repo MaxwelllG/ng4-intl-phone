@@ -246,4 +246,8 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
             }
         }
     }
+
+    public emitPhoneInputFocus() {
+        this.phoneInputChangedEvent.emit();
+    }
 }
