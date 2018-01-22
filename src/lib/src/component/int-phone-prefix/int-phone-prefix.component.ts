@@ -174,6 +174,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     }
 
     updatePhone() {
+        this.phoneInput = this.phoneInput.split('.').join(''); // remove points workaround
         if (IntPhonePrefixComponent.startsWithPlus(this.phoneInput)) {
             this.findPrefix(this.phoneInput.split(PLUS)[1]);
         }
