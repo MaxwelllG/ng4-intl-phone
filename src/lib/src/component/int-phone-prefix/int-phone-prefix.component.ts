@@ -97,11 +97,11 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
             }
             if (event.keyCode == 38) { // up
                 event.preventDefault();
-                element = event.srcElement.previousElementSibling;
+                element = event.target.previousElementSibling;
             }
             if (event.keyCode == 40) { // down
                 event.preventDefault();
-                element = event.srcElement.nextElementSibling;
+                element = event.target.nextElementSibling;
             }
 
             if (element) {
