@@ -53,6 +53,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
     @Output() blurEvent = new EventEmitter();
     @Output() phoneInputChangedEvent = new EventEmitter();
+    @Output() selectedCountryChanged = new EventEmitter();
 
     // ELEMENT REF
     phoneComponent: ElementRef;
@@ -167,6 +168,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         this.updatePhoneInput(countryCode);
 
         this.updateValue();
+        this.selectedCountryChanged.emit();
     }
 
     showDropDown() {
