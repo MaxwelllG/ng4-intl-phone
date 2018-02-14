@@ -48,6 +48,9 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     @Input()
     phonePlaceholder: string;
 
+    @Input()
+    storedUserCountry: Country;
+
     @Output() blurEvent = new EventEmitter();
     @Output() phoneInputChangedEvent = new EventEmitter();
 
@@ -139,6 +142,9 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
         if (IntPhonePrefixComponent.startsWithPlus(this.value)) {
             this.findPrefix(this.value.split(PLUS)[1]);
+            if (this.storedUserCountry) {
+                this.selectedCountry = this.storedUserCountry;
+            }
             if (this.selectedCountry) {
                 this.updatePhoneInput(this.selectedCountry.countryCode);
             }
@@ -208,8 +214,6 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
     private findPrefix(prefix: string) {
         let foundPrefixes: Country[] = this.countries.filter((country: Country) => prefix.startsWith(country.dialCode));
-        let targetCountry = foundPrefixes.find((country: Country) => country.dialCode === country.dialCode);
-        console.log(targetCountry);
         this.selectedCountry = !_.isEmpty(foundPrefixes)
             ? IntPhonePrefixComponent.reducePrefixes(foundPrefixes)
             : null;

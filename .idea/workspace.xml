@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9299ae4-84ec-456f-b902-ca795a48cf1a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts" afterPath="$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="int-phone-prefix.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="210" column="91" lean-forward="false" selection-start-line="210" selection-start-column="91" selection-end-line="210" selection-end-column="91" />
+            <state relative-caret-position="347">
+              <caret line="216" column="28" lean-forward="false" selection-start-line="216" selection-start-column="13" selection-end-line="216" selection-end-column="28" />
               <folding>
                 <element signature="e#0#164#0" expanded="true" />
               </folding>
@@ -33,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/src/lib/src/service/country.service.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="317">
-              <caret line="125" column="12" lean-forward="true" selection-start-line="125" selection-start-column="12" selection-end-line="129" selection-end-column="13" />
+              <caret line="125" column="12" lean-forward="false" selection-start-line="125" selection-start-column="12" selection-end-line="129" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -93,9 +92,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hideDropdown</find>
-      <find>filter</find>
-      <find>show</find>
       <find>showD</find>
       <find>console</find>
       <find>countryFilter</find>
@@ -117,12 +113,15 @@
       <find>us</find>
       <find>countries</find>
       <find>BUL</find>
-      <find>this.selectedCountry</find>
       <find>124</find>
       <find>bs</find>
       <find>1'</find>
       <find>'1'</find>
       <find>findPrefix</find>
+      <find>this.selectedCountry</find>
+      <find>updatePhoneInput</find>
+      <find>updateSelectedCountry</find>
+      <find>selectedCountry</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -305,12 +304,12 @@
       <option name="presentableId" value="Default" />
       <updated>1515404633164</updated>
       <workItem from="1515404635081" duration="98507000" />
-      <workItem from="1518526872094" duration="6889000" />
+      <workItem from="1518526872094" duration="9285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105396000" />
+    <option name="totallyTimeSpent" value="107792000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2560" height="1352" extended-state="6" />
@@ -439,14 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/src/directive/only-number.directive.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -490,15 +481,23 @@
     <entry file="file://$PROJECT_DIR$/src/lib/src/service/country.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
-          <caret line="125" column="12" lean-forward="true" selection-start-line="125" selection-start-column="12" selection-end-line="129" selection-end-column="13" />
+          <caret line="125" column="12" lean-forward="false" selection-start-line="125" selection-start-column="12" selection-end-line="129" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="210" column="91" lean-forward="false" selection-start-line="210" selection-start-column="91" selection-end-line="210" selection-end-column="91" />
+        <state relative-caret-position="347">
+          <caret line="216" column="28" lean-forward="false" selection-start-line="216" selection-start-column="13" selection-end-line="216" selection-end-column="28" />
           <folding>
             <element signature="e#0#164#0" expanded="true" />
           </folding>
