@@ -68,6 +68,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
     value = '';
     filterString = '';
+    // test branch is  correct (save country)
 
     // FILTER COUNTRIES LIST WHEN DROPDOWN IS OPEN
     @HostListener('document:keydown', ['$event'])
