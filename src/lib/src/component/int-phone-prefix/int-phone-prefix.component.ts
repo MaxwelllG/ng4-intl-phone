@@ -147,11 +147,18 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
             }
             if (this.selectedCountry) {
                 this.updatePhoneInput(this.selectedCountry.countryCode);
+                return;
             }
+        }
+
+        if (this.storedUserCountry) {
+            this.updatePhoneInput(this.storedUserCountry.countryCode);
+            return;
         }
 
         if (this.defaultCountry && !this.selectedCountry) {
             this.updatePhoneInput(this.defaultCountry);
+            return;
         }
     }
 
