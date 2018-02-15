@@ -223,9 +223,11 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
     private findPrefix(prefix: string) {
         let foundPrefixes: Country[] = this.countries.filter((country: Country) => prefix.startsWith(country.dialCode));
-        this.selectedCountry = !_.isEmpty(foundPrefixes)
-            ? IntPhonePrefixComponent.reducePrefixes(foundPrefixes)
-            : null;
+        if (!this.selectedCountry) {
+            this.selectedCountry = !_.isEmpty(foundPrefixes)
+                ? IntPhonePrefixComponent.reducePrefixes(foundPrefixes)
+                : null;
+        }
     }
 
     private updateValue() {
