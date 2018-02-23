@@ -54,7 +54,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     @Output() blurEvent = new EventEmitter();
     @Output() phoneInputChangedEvent = new EventEmitter();
     @Output() selectedCountryChanged = new EventEmitter();
-    private updatedCountryFromDropdown: boolean;
+    updatedCountryFromDropdown: boolean;
 
     // ELEMENT REF
     phoneComponent: ElementRef;

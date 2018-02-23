@@ -19,8 +19,8 @@
       <file leaf-file-name="int-phone-prefix.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="158" column="9" lean-forward="false" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
+            <state relative-caret-position="-609">
+              <caret line="172" column="39" lean-forward="false" selection-start-line="172" selection-start-column="13" selection-end-line="172" selection-end-column="39" />
               <folding>
                 <element signature="e#0#164#0" expanded="true" />
               </folding>
@@ -316,12 +316,12 @@
       <updated>1515404633164</updated>
       <workItem from="1515404635081" duration="98507000" />
       <workItem from="1518526872094" duration="15221000" />
-      <workItem from="1519368677935" duration="1004000" />
+      <workItem from="1519368677935" duration="1380000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114732000" />
+    <option name="totallyTimeSpent" value="115108000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2560" height="1352" extended-state="6" />
@@ -571,8 +571,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/src/component/int-phone-prefix/int-phone-prefix.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="158" column="9" lean-forward="false" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
+        <state relative-caret-position="-609">
+          <caret line="172" column="39" lean-forward="false" selection-start-line="172" selection-start-column="13" selection-end-line="172" selection-end-column="39" />
           <folding>
             <element signature="e#0#164#0" expanded="true" />
           </folding>
