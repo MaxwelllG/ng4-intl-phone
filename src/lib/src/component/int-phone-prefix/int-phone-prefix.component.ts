@@ -166,11 +166,12 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
     updateSelectedCountry(event: Event, countryCode: string) {
         event.preventDefault();
+        this.updatedCountryFromDropdown = true;
+
         this.updatePhoneInput(countryCode);
 
         this.updateValue();
         this.selectedCountryChanged.emit();
-        this.updatedCountryFromDropdown = true;
     }
 
     showDropDown() {
