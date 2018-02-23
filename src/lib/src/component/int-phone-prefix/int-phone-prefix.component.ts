@@ -9,11 +9,11 @@ import {
     OnInit,
     Renderer2
 } from '@angular/core';
-import {Country} from '../../interface/country.interface';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {CountryCode} from '../../interface/country-code.interface';
-import {CountryService} from '../../service/country.service';
-import {LocaleService} from '../../service/locale.service';
+import { Country } from '../../interface/country.interface';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { CountryCode } from '../../interface/country-code.interface';
+import { CountryService } from '../../service/country.service';
+import { LocaleService } from '../../service/locale.service';
 import * as _ from 'lodash';
 
 const COUNTER_CONTROL_ACCESSOR = {
@@ -49,7 +49,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     phonePlaceholder: string;
 
     @Input()
-    storedUserCountry: Country;
+    storedUserCountry: any;
 
     @Output() blurEvent = new EventEmitter();
     @Output() phoneInputChangedEvent = new EventEmitter();
@@ -144,7 +144,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         if (IntPhonePrefixComponent.startsWithPlus(this.value)) {
             this.findPrefix(this.value.split(PLUS)[1]);
             if (this.storedUserCountry) {
-                this.selectedCountry = this.storedUserCountry;
+                this.selectedCountry = this.countries.find((country: Country) => country.countryCode === this.storedUserCountry.countryCode);
             }
             if (this.selectedCountry) {
                 this.updatePhoneInput(this.selectedCountry.countryCode);
