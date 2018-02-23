@@ -54,6 +54,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     @Output() blurEvent = new EventEmitter();
     @Output() phoneInputChangedEvent = new EventEmitter();
     @Output() selectedCountryChanged = new EventEmitter();
+    private updatedCountryFromDropdown: boolean;
 
     // ELEMENT REF
     phoneComponent: ElementRef;
@@ -143,7 +144,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
         if (IntPhonePrefixComponent.startsWithPlus(this.value)) {
             this.findPrefix(this.value.split(PLUS)[1]);
-            if (this.storedUserCountry) {
+            if (this.storedUserCountry && !this.updatedCountryFromDropdown) {
                 this.selectedCountry = this.countries.find((country: Country) => country.countryCode === this.storedUserCountry.countryCode);
             }
             if (this.selectedCountry) {
@@ -169,6 +170,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
         this.updateValue();
         this.selectedCountryChanged.emit();
+        this.updatedCountryFromDropdown = true;
     }
 
     showDropDown() {
