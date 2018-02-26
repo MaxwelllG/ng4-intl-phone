@@ -9,11 +9,11 @@ import {
     OnInit,
     Renderer2
 } from '@angular/core';
-import {Country} from '../../interface/country.interface';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {CountryCode} from '../../interface/country-code.interface';
-import {CountryService} from '../../service/country.service';
-import {LocaleService} from '../../service/locale.service';
+import { Country } from '../../interface/country.interface';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { CountryCode } from '../../interface/country-code.interface';
+import { CountryService } from '../../service/country.service';
+import { LocaleService } from '../../service/locale.service';
 import * as _ from 'lodash';
 
 const COUNTER_CONTROL_ACCESSOR = {
@@ -48,8 +48,12 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     @Input()
     phonePlaceholder: string;
 
+    @Input()
+    storedUserCountry: any;
+
     @Output() blurEvent = new EventEmitter();
     @Output() phoneInputChangedEvent = new EventEmitter();
+    @Output() selectedCountryChanged = new EventEmitter();
 
     // ELEMENT REF
     phoneComponent: ElementRef;
@@ -65,9 +69,11 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     showDropdown = false;
     phoneInput = '';
     disabled = false;
+    updatedCountryFromDropdown = false;
 
     value = '';
     filterString = '';
+    // test branch is  correct (save country)
 
     // FILTER COUNTRIES LIST WHEN DROPDOWN IS OPEN
     @HostListener('document:keydown', ['$event'])
@@ -138,21 +144,34 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
         if (IntPhonePrefixComponent.startsWithPlus(this.value)) {
             this.findPrefix(this.value.split(PLUS)[1]);
+            if (this.storedUserCountry && !this.updatedCountryFromDropdown) {
+                this.selectedCountry = this.countries.find((country: Country) => country.countryCode === this.storedUserCountry.countryCode);
+            }
             if (this.selectedCountry) {
                 this.updatePhoneInput(this.selectedCountry.countryCode);
+                return;
             }
+        }
+
+        if (this.storedUserCountry) {
+            this.updatePhoneInput(this.storedUserCountry.countryCode);
+            return;
         }
 
         if (this.defaultCountry && !this.selectedCountry) {
             this.updatePhoneInput(this.defaultCountry);
+            return;
         }
     }
 
     updateSelectedCountry(event: Event, countryCode: string) {
         event.preventDefault();
+        this.updatedCountryFromDropdown = true;
+
         this.updatePhoneInput(countryCode);
 
         this.updateValue();
+        this.selectedCountryChanged.emit();
     }
 
     showDropDown() {
@@ -207,9 +226,11 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
     private findPrefix(prefix: string) {
         let foundPrefixes: Country[] = this.countries.filter((country: Country) => prefix.startsWith(country.dialCode));
-        this.selectedCountry = !_.isEmpty(foundPrefixes)
-            ? IntPhonePrefixComponent.reducePrefixes(foundPrefixes)
-            : null;
+        if (!this.selectedCountry) {
+            this.selectedCountry = !_.isEmpty(foundPrefixes)
+                ? IntPhonePrefixComponent.reducePrefixes(foundPrefixes)
+                : null;
+        }
     }
 
     private updateValue() {
