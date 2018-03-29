@@ -9,3 +9,12 @@ src/**/*.js
 *.js.map
 e2e/**/*.js
 e2e/**/*.js.map
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
