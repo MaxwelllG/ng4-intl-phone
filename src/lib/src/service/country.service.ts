@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {Country} from "../interface/country.interface";
+import { Injectable } from '@angular/core';
+import { Country } from "../interface/country.interface";
 
 @Injectable()
 export class CountryService {
@@ -8,6 +8,11 @@ export class CountryService {
 
     constructor() {
         this.countries = [
+            {
+                name: '',
+                dialCode: '61',
+                countryCode: 'au'
+            },
             {
                 name: '',
                 dialCode: '994',
