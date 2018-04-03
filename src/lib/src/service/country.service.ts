@@ -15,6 +15,11 @@ export class CountryService {
             },
             {
                 name: '',
+                dialCode: '43',
+                countryCode: 'at'
+            },
+            {
+                name: '',
                 dialCode: '994',
                 countryCode: 'az'
             },
