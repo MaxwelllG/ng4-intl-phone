@@ -7,26 +7,50 @@ This is a simple library with international phone prefix with flags images.
 
 To install this component to an external project, follow the procedure:
 
-1. __npm install ng4-intl-phone --save__
+1. __npm install ngx-intl-phone --save__
 
 2. Add __InternationalPhoneModule__ import to your __@NgModule__ like example below
     ```ts
     import { NgModule } from '@angular/core';
     import { BrowserModule } from '@angular/platform-browser';
     import { MyTestApp } from './my-test-app';
-    import { InternationalPhoneModule } from 'ng4-intl-phone';
+    import { InternationalPhoneModule } from 'ngx-intl-phone';
 
     @NgModule({
-        imports:      [ BrowserModule, InternationalPhoneModule ],
-        declarations: [ MyTestApp ],
-        bootstrap:    [ MyTestApp ]
+        ...
+        imports:      [ BrowserModule, InternationalPhoneModule ]
+        ...
     })
     export class MyTestAppModule {}
     ```
-    
-    ##Testing in localhost
-    - `npm install ./relative/path/to/lib` after `npm run build` to test locally in another app
-    
+3. Provide custom __locale__ and __country__ services
+
+    Use forRoot() with InternationalPhoneConfigModule like example below
+    ```ts
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { MyTestApp } from './my-test-app';
+    import { InternationalPhoneModule } from 'ngx-intl-phone';
+
+    @NgModule({
+        ...
+        imports:      [ BrowserModule, 
+                        InternationalPhoneModule.forRoot({
+                            locale: {
+                                provide: LocaleService,
+                                useClass: YourCustomLocaleService
+                            },
+                            locale: {
+                                provide: CountryService,
+                                useClass: YourCustomCountryService
+                            }
+                        }) 
+        ],
+        ...
+    })
+    export class MyTestAppModule {}
+    ```
+
     ## Usage
     
     Use one of the following two options.
@@ -91,10 +115,10 @@ To install this component to an external project, follow the procedure:
     * License: MIT
     
     ## Author
-    * Author: kondi0
+    * Author: MaxwelllG
     
     ## Mail
-    * Mail: kondi.czerwinski@gmail.com
+    * Mail: godet.matthieu@gmail.com
     
     ## Keywords
     * Phone 
@@ -102,3 +126,4 @@ To install this component to an external project, follow the procedure:
     * International
     * Angular2
     * Angular4
+    * Angular5

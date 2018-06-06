@@ -1,5 +1,5 @@
 // MODULE
-export { InternationalPhoneModule } from './src/module';
+export { InternationalPhoneModule, InternationalPhoneModuleConfig } from './src/module';
 
 // INTERFACE
 export { Country } from './src/interface/country.interface';

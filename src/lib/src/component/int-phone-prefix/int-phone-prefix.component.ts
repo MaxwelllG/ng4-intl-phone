@@ -1,14 +1,4 @@
-import {
-    Component,
-    ElementRef,
-    forwardRef,
-    HostListener,
-    Input,
-    Output,
-    EventEmitter,
-    OnInit,
-    Renderer2
-} from '@angular/core';
+import { Component, ElementRef, EventEmitter, forwardRef, HostListener, Input, OnInit, Output } from '@angular/core';
 import { Country } from '../../interface/country.interface';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CountryCode } from '../../interface/country-code.interface';
@@ -33,9 +23,9 @@ const PLUS = '+';
         '../../assets/flags/flags.min.css'
     ],
     host: {
-        '(document:click)': 'hideDropdown($event)',
+        '(document:click)': 'hideDropdown($event)'
     },
-    providers: [COUNTER_CONTROL_ACCESSOR, CountryService, LocaleService]
+    providers: [COUNTER_CONTROL_ACCESSOR]
 })
 export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
@@ -228,7 +218,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         let foundPrefixes: Country[] = this.countries.filter((country: Country) => prefix.startsWith(country.dialCode));
         if (!this.selectedCountry) {
             this.selectedCountry = !_.isEmpty(foundPrefixes)
-                ? IntPhonePrefixComponent.reducePrefixes(foundPrefixes)
+                ? this.reducePrefixes(foundPrefixes)
                 : null;
         }
     }
@@ -243,7 +233,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         return text.startsWith(PLUS);
     }
 
-    private static reducePrefixes(foundPrefixes: Country[]) {
+    private reducePrefixes(foundPrefixes: Country[]) {
         return foundPrefixes.reduce(
             (first: Country, second: Country) =>
                 first.dialCode.length > second.dialCode.length
